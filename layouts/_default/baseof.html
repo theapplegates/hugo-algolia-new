@@ -15,6 +15,18 @@
 >
   {{- partial "head.html" . -}}
   <body
+  <input type="search" class="docsearch-input" placeholder="cat" />
+  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script>
+    docsearch({
+      apiKey: 'c940fb4ffc6094b3b0532dc02a095e64',
+      indexName: 'congo',
+      appId: '3KYKGL01NP',
+      inputSelector: '.docsearch-input',
+      debug: false,
+    });
+  </script>
+
     class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
   >
     <div id="the-top" class="absolute flex self-center">
