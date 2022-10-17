@@ -1,5 +1,6 @@
 <head>
   <meta charset="utf-8" />
+  <input type="search" class="docsearch-input" placeholder="Search" />
   {{ with .Site.Language.Params.htmlCode | default .Site.LanguageCode }}
     <meta http-equiv="content-language" content="{{ . }}" />
   {{ end }}
@@ -112,4 +113,14 @@
   {{ if templates.Exists "partials/extend-head.html" }}
     {{ partialCached "extend-head.html" .Site }}
   {{ end }}
+  <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script>
+    docsearch({
+      apiKey: 'c940fb4ffc6094b3b0532dc02a095e64',
+      indexName: 'congo',
+      appId: '3KYKGL01NP',
+      inputSelector: '.docsearch-input',
+      debug: false,
+    });
+  </script>
 </head>
